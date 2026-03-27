@@ -1,0 +1,34 @@
+{
+  "name": "fartexh-harlink-web1-1",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/GenesisAdduru/Fartexh-Harlink-Web1#readme",
+  "bugs": {
+    "url": "https://github.com/GenesisAdduru/Fartexh-Harlink-Web1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GenesisAdduru/Fartexh-Harlink-Web1.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev:server": "nodemon server/index.js",
+    "dev:client": "cd client && npm run dev",
+    "install:client": "cd client && npm install",
+    "install:server": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

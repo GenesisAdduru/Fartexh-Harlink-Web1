@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #111;
+}
+
+.settings-page {
+  min-height: 100vh;
+  position: relative;
+}
+
+.back-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 20;
+  text-decoration: none;
+  color: #111;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn:hover {
+  color: #d61b74;
+}
+
+.profile-shell {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.top-bg {
+  width: 100%;
+  height: 355px;
+  background: linear-gradient(to right, #e8c5ef 0%, #efbfd1 100%);
+}
+
+.profile-card {
+  width: min(720px, 92%);
+  margin: -265px auto 0;
+  background: #f7f5f6;
+  border: 1.5px solid #333;
+  border-radius: 48px;
+  overflow: hidden;
+}
+
+.profile-header {
+  padding: 26px 24px 34px;
+  text-align: center;
+  border-bottom: 1.5px solid #444;
+}
+
+.avatar-wrap {
+  position: relative;
+  width: 138px;
+  height: 138px;
+  margin: 0 auto 18px;
+}
+
+.avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #cfcfcf;
+  border: 8px solid #ededed;
+}
+
+.camera-btn {
+  position: absolute;
+  right: 6px;
+  bottom: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #bcbcbc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #111;
+}
+
+.profile-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.user-id {
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  min-width: 118px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  border: 1.5px solid #0b7f47;
+  color: #fff;
+  background: #d61b74;
+  box-shadow: 0 2px 0 #0b7f47;
+}
+
+.status-badge.recipient {
+  background: #f3dfe7;
+  color: #111;
+}
+
+.profile-body {
+  padding: 18px 28px 34px;
+}
+
+.profile-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.profile-top-row h2 {
+  font-size: 1rem;
+  color: #5d5d5d;
+  font-weight: 800;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  border: 1.5px solid #9c9c9c;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.save-row {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin: 14px 0 10px;
+}
+
+.save-btn {
+  background: #ef9bc4;
+  color: #111;
+  border-color: #c8709a;
+}
+
+.cancel-btn {
+  background: #f4f4f4;
+}
+
+.hidden {
+  display: none;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-card {
+  background: #d8d5d7;
+  border-radius: 18px;
+  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-icon {
+  font-size: 2rem;
+  color: #727272;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-content label {
+  display: block;
+  color: #5f5f5f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.info-content input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+}
+
+.role-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role-select {
+  display: none;
+  width: 220px;
+  max-width: 100%;
+  border: 1.5px solid #bbb;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+}
+
+.role-select.show {
+  display: block;
+}
+
+.status-note {
+  margin: 18px 0 18px;
+  font-size: 0.98rem;
+  color: #4f4f4f;
+  background: #fff4f8;
+  border: 1px solid #f2bfd6;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.reward-card {
+  margin-top: 10px;
+  background: #ef93b7;
+  border: 1.5px solid #809689;
+  border-radius: 22px;
+  padding: 20px 22px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 14px;
+}
+
+.reward-icon {
+  font-size: 3.4rem;
+  line-height: 1;
+}
+
+.reward-card h3 {
+  color: #006c39;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.points {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #006c39;
+}
+
+.reward-card p {
+  color: #006c39;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.referral-card {
+  margin-top: 20px;
+  background: #f7f5f6;
+  border: 1.5px solid #d8d5d7;
+  border-radius: 22px;
+  padding: 20px 22px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 14px;
+}
+
+.referral-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.referral-head i {
+  font-size: 2.5rem;
+  color: #d61b74;
+}
+
+.referral-head h3 {
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.referral-code {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #d61b74;
+  margin: 8px 0;
+}
+
+.referral-card p {
+  color: #5d5d5d;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    width: min(680px, 96%);
+    margin-top: -245px;
+  }
+
+  .profile-header {
+    padding: 20px 20px 28px;
+  }
+
+  .avatar-wrap {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .status-badge {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+
+  .profile-body {
+    padding: 16px 20px 28px;
+  }
+
+  .profile-top-row {
+    margin-bottom: 16px;
+  }
+
+  .info-card {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .info-icon {
+    font-size: 1.8rem;
+  }
+
+  .info-content label {
+    font-size: 0.85rem;
+  }
+
+  .info-content input {
+    font-size: 0.95rem;
+  }
+
+  .save-row {
+    margin: 12px 0 8px;
+  }
+
+  .status-note {
+    margin: 16px 0;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .reward-card,
+  .referral-card {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+
+  .reward-icon {
+    font-size: 2.8rem;
+  }
+
+  .points {
+    font-size: 2.4rem;
+  }
+
+  .referral-head i {
+    font-size: 2.2rem;
+  }
+
+  .referral-code {
+    font-size: 1.1rem;
+  }
+
+  .back-btn {
+    top: 16px;
+    left: 16px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,36 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+
+.dashboard-section { width: min(1120px, 90%); margin: 45px auto; }
+
+.dashboard-section h2 { font-size: 2.5rem; margin-bottom: 8px; color: #db2777; }
+.dashboard-intro { color: #505050; margin-bottom: 24px; font-size: 1rem; }
+
+.dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.dashboard-card { background: #fff; border: 2px solid #f4c6dd; border-radius: 20px; padding: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+
+.dashboard-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+
+.dashboard-tag { background: #f4d9e7; color: #a52d63; padding: 5px 10px; border-radius: 12px; font-weight: 700; }
+
+.dashboard-subtitle { margin-bottom: 14px; color: #666; }
+
+.dashboard-stats { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 16px; }
+
+.stat { display: flex; justify-content: space-between; }
+
+.stat-label { color: #555; font-weight: 600; }
+
+.stat-value { font-size: 1.05rem; font-weight: 700; }
+
+.status-pill { background: #e8e4fa; color: #472887; padding: 4px 8px; border-radius: 12px; }
+
+.dashboard-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn { border: 2px solid #db2777; background: white; color: #db2777; padding: 10px 14px; border-radius: 10px; text-decoration: none; font-weight: 700; transition: all 0.2s; }
+
+.btn:hover { background: #f9c6df; }
+
+.btn.secondary { border-color: #a93670; color: #a93670; }
+
+@media (max-width: 900px) { .dashboard-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,45 @@
+.partners {
+  padding: 80px 10%;
+  text-align: center;
+  background: #fff0f6;
+}
+
+.partners h2 {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  color: #9d174d;
+}
+
+.slider {
+  width: min(100%, 640px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.logo {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.logo:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 60px 6%;
+  }
+
+  .partners h2 {
+    font-size: 2rem;
+  }
+}
